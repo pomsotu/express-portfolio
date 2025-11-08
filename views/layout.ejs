@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= title || "My Portfolio" %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(to right, lightblue, lightcyan);">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="/"><i class="fa-solid fa-code"></i> My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link <%= active==='home' ? 'fw-bold text-dark' : '' %>" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link <%= active==='about' ? 'fw-bold text-dark' : '' %>" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link <%= active==='projects' ? 'fw-bold text-dark' : '' %>" href="/projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link <%= active==='contact' ? 'fw-bold text-dark' : '' %>" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main class="container py-4">
+    <%- body %>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4" style="background: linear-gradient(to right, lightblue, lightcyan);">
+    <div class="container">
+      <p class="mb-1">© <span id="year"></span> Mario Onyido</p>
+      <p class="mb-0">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:mariosolundu.onyido@ontariotechu.com">mariosolundu.onyido@ontariotechu.com</a>
+        &nbsp;•&nbsp;
+        <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/pomsotu" target="_blank">GitHub</a>
+        &nbsp;•&nbsp;
+        <i class="fa-brands fa-linkedin"></i>
+        <a href="https://linkedin.com/in/mario-onyido-51417436a/" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

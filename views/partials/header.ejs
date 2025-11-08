@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= title || "My Portfolio" %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(to right, lightblue, lightcyan);">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="/">
+        <i class="fa-solid fa-code"></i> My Portfolio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link <%= active==='home' ? 'fw-bold text-dark' : '' %>" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link <%= active==='about' ? 'fw-bold text-dark' : '' %>" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link <%= active==='projects' ? 'fw-bold text-dark' : '' %>" href="/projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link <%= active==='contact' ? 'fw-bold text-dark' : '' %>" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">

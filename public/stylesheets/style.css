@@ -1,8 +1,19 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* Base */
+body { color: #111; }
+h1, h2, h3 { color: #0a2a66; }
+.navbar-brand i { margin-right: .35rem; }
+
+/* Projects hover demo (Week 4) */
+.project-card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.12);
 }
 
-a {
-  color: #00B7FF;
+/* Mobile responsiveness (Week 3) */
+@media (max-width: 480px) {
+  body { background: linear-gradient(45deg, lightcyan, white, lightblue); }
+  .container { width: 95%; }
 }
