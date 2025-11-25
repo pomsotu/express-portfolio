@@ -2,9 +2,7 @@
 
 **Student:** Mario Onyido  
 **Course:** Web and Script Programming  
-**Assignment:** Assignment 2 – ExpressJS Portfolio  
-**Professor:** [Insert professor’s name here]  
-**Date Submitted:** [Insert date here]  
+**Assignment:** Assignment 2 – ExpressJS Portfolio    
 
 ---
 
